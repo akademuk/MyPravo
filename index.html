@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -66,8 +67,21 @@
         <button class="open-popup">
             Зателефонувати
         </button>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
        </div>
     </header>
+
+    <nav class="navBurger">
+        <ul>
+          <li><a href="#" class="linkBurger" onclick="closeBurger()">Menu item 1</a></li>
+          <li><a href="#" class="linkBurger" onclick="closeBurger()">Another menu item</a></li>
+          <li><a href="#" class="linkBurger" onclick="closeBurger()">One last menu item</a></li>
+        </ul>
+      </nav>
 
     <section class="titleContainer">
         <div class="wrapper">
@@ -99,7 +113,7 @@
     <section class="cardContainer">
         <div class="wrapper">
             <h2>Як отримати нашу послугу:</h2>
-           <div class="cardSection">
+           <div class="cardSection cardSlider">
                 <div class="cardBlock">
                     <b>Зв’яжіться з нами</b> за вказаним номером телефону і отримуєте безкоштовну  консультацію про перелік документів, які потрібно надати  і яким чином їх легко отримати.
                 </div>
@@ -456,8 +470,13 @@
         </div>
     </footer>
 
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script/burger.js"></script>
     <script src="script/accardion.js"></script>
     <script src="script/modal.js"></script>
+    <script src="script/sliderCard.js"></script>
 </body>
 </html>
 

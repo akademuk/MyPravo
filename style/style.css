@@ -186,6 +186,92 @@ footer ul li:nth-of-type(1) a{
   padding-top: 103px;
   height: 100%;
 }
+.navBurger {
+  display: none;
+}
+.burger {
+  display: none;
+}
+.burger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 22px;
+  background: none;
+  box-shadow: none;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.burger span {
+  position: absolute;
+  left: 50%;
+  width: 26px;
+  height: 2px;
+  background-color: #1C50FE;
+}
+.burger span:nth-of-type(1) {
+  top: 0;
+  transform: translateX(-50%) translateY(0);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s,transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+}
+.burger span:nth-of-type(2) {
+  top: 8px;
+  opacity: 1;
+  transform: translateX(-50%);
+}
+.burger span:nth-of-type(3) {
+  top: 16px;
+  transform: translateX(-50%) translateY(0);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s,transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+} 
+.burger.open span:nth-of-type(1) {
+  top: 50%;          
+  transform: translateX(-50%) translateY(0) rotate(45deg);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+}
+.burger.open span:nth-of-type(2) {
+  opacity: 0;
+}
+.burger.open span:nth-of-type(3) {
+  top: 50%;
+  transform: translateX(-50%) translateY(0) rotate(-45deg);
+  transition: bottom .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) ,transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+}
+nav {
+  position: fixed;
+  left: 0;
+  height: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #000;
+  transform: translateX(-100%);
+  transition: all .2s ease-out;
+}
+nav ul {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+nav ul li {
+  padding: 12px 0;
+}
+.linkBurger {
+  font-family: "Inter-Medium";
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+nav.open {
+  transform: translateX(0);
+}
 .titleContainerRight {
   position: absolute;
   right: 0;
@@ -744,4 +830,30 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .navBurger {
+      display: block;
+  }
+  .burger {
+      display: block;
+  }
 }
