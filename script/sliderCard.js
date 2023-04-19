@@ -4,9 +4,9 @@ if (window.innerWidth < 767) {
         slidesToScroll: 1,
         dots: true,
         infinite: true,
-        prevArrow: $('.newsPrev'),
-        nextArrow: $('.newsNext'),
-        appendDots: $('.newsDots'),
+        prevArrow: $('.cardSliderPrev'),
+        nextArrow: $('.cardSliderNext'),
+        appendDots: $('.cardSliderDots'),
     });
   }
   

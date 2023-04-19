@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style/style.css">
     <title>MyPravo</title>
 </head>
-<body>
+<body class="body">
     <div id="popup" class="popup">
     <div class="popup-content">
         <button class="close-popup">
@@ -77,10 +77,15 @@
 
     <nav class="navBurger">
         <ul>
-          <li><a href="#" class="linkBurger" onclick="closeBurger()">Menu item 1</a></li>
-          <li><a href="#" class="linkBurger" onclick="closeBurger()">Another menu item</a></li>
-          <li><a href="#" class="linkBurger" onclick="closeBurger()">One last menu item</a></li>
+          <li><a href="#" class="linkBurger" onclick="closeBurger()">Головна</a></li>
+          <li><a href="#" class="linkBurger" onclick="closeBurger()">Послуги</a></li>
+          <li><a href="#" class="linkBurger" onclick="closeBurger()">Документи</a></li>
+          <li><a href="#" class="linkBurger" onclick="closeBurger()">FAQ</a></li>
+          <li><a href="#" class="linkBurger" onclick="closeBurger()">Контакти</a></li>
         </ul>
+        <button class="open-popup">
+            Зателефонувати
+        </button>
       </nav>
 
     <section class="titleContainer">
@@ -113,6 +118,9 @@
     <section class="cardContainer">
         <div class="wrapper">
             <h2>Як отримати нашу послугу:</h2>
+            <div class="cardSliderPrev">
+                <img src="img/sliderArrow.svg" alt="prev">
+            </div>
            <div class="cardSection cardSlider">
                 <div class="cardBlock">
                     <b>Зв’яжіться з нами</b> за вказаним номером телефону і отримуєте безкоштовну  консультацію про перелік документів, які потрібно надати  і яким чином їх легко отримати.
@@ -130,6 +138,10 @@
                     <b>Перераховуємо Вам на вказані реквізити повернуті кошти.</b>
                 </div>
            </div>
+           <div class="cardSliderNext">
+            <img src="img/sliderArrow.svg" alt="next">
+        </div>
+           <div class="cardSliderDots"></div>
         </div>
     </section>
 

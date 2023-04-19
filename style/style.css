@@ -189,13 +189,16 @@ footer ul li:nth-of-type(1) a{
 .navBurger {
   display: none;
 }
+.body.active {
+  overflow: hidden;
+}
 .burger {
   display: none;
 }
 .burger {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 29px;
+  right: 16px;
   width: 40px;
   height: 22px;
   background: none;
@@ -208,9 +211,10 @@ footer ul li:nth-of-type(1) a{
 .burger span {
   position: absolute;
   left: 50%;
-  width: 26px;
-  height: 2px;
-  background-color: #1C50FE;
+  width: 34px;
+  height: 4px;
+  background: #303D4B;
+  border-radius: 50px;
 }
 .burger span:nth-of-type(1) {
   top: 0;
@@ -242,13 +246,14 @@ footer ul li:nth-of-type(1) a{
 }
 nav {
   position: fixed;
-  left: 0;
+  right: 0;
   height: 100%;
-  padding: 50px;
+  z-index: 100;
+  padding: 0 20px 20px 20px;
   box-sizing: border-box;
   width: 100%;
-  background-color: #000;
-  transform: translateX(-100%);
+  background: #F6F6F6;
+  transform: translateX(100%);
   transition: all .2s ease-out;
 }
 nav ul {
@@ -263,14 +268,18 @@ nav ul li {
   padding: 12px 0;
 }
 .linkBurger {
-  font-family: "Inter-Medium";
-  font-size: 14px;
-  line-height: 17px;
-  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #0F1217;
   text-decoration: none;
 }
 nav.open {
   transform: translateX(0);
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 .titleContainerRight {
   position: absolute;
@@ -831,6 +840,150 @@ footer {
   align-items: center;
   justify-content: space-between;
 }
+.cardSliderPrev,
+.cardSliderNext {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 0 32px;
+    box-sizing: border-box;
+  }
+  .bannerContainerList {
+    left: auto;
+    right: 20px;
+    transform: none;
+  }
+  .titleContainerLeft h1 {
+    font-size: 30px;
+  }
+  .titleContainer {
+    height: 700px;
+  }
+  .ways .wrapper h2 {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+  .wrapper {
+    padding: 0 16px;
+  }
+  header .wrapper > button {
+    width: 150px;
+  }
+  header ul li, footer ul li {
+    margin-right: 16px;
+  }
+  .titleContainerLeft {
+    width: 100%;
+  }
+  .titleContainer .wrapper {
+    padding-top: 40px;
+  }
+  .titleContainerRight {
+    position: static;
+    margin-top: 36px;
+    width: 100%;
+    height: 344px;
+  }
+  .titleContainer {
+    height: auto;
+  }
+  .bannerContainerList {
+    width: 96%;
+    max-width: 100%;
+    left: 16px;
+    bottom: -140px;
+    right: 16px;
+    box-sizing: border-box;
+  }
+  .cardContainer {
+    padding-top: 170px;
+  }
+  .cardContainer .wrapper h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .cardSection  {
+    flex-wrap: wrap;
+  }
+  .cardBlock {
+    width: 49%;
+    margin-bottom: 20px;
+    min-height: 150px;
+  }
+  .cardContainer {
+    padding-bottom: 40px;
+  }
+  .requiredDocuments {
+    padding: 40px 0;
+  }
+  .requiredDocumentsLeft h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .requiredDocumentsLeftText {
+    font-size: 18px;
+  }
+  .ways .wrapper h2 {
+    padding-right: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .waysContaierLeft h3, .waysContaierRight h3 {
+    font-size: 18px;
+  }
+  .ways {
+    padding-bottom: 40px;
+  }
+  .faq {
+    padding: 40px 0;
+  }
+  .faq .wrapper h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .accordion-header h3 {
+    font-size: 18px;
+  }
+  .contact {
+    padding: 40px 0;
+  }
+  .contact .wrapper > h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .contactLeft > p {
+    width: 100%;
+  }
+  .contactRight {
+    height: max-content;
+  }
+  .contactInfo p {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  footer .wrapper > button {
+    width: 150px;
+  }
+  .waysContaierRight p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .requiredDocumentsRight img {
+    height: 100%;
+  }
+}
 
 
 
@@ -839,21 +992,214 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navBurger {
       display: block;
   }
   .burger {
       display: block;
+      position: absolute;
+  }
+  header .wrapper > ul{
+    display: none;
+  }
+  header .wrapper > button{
+    display: none;
+  }
+  header .wrapper {
+    position: relative;
+  }
+  .titleContainerLeft h1 {
+    font-size: 25px;
+    margin-bottom: 16px;
+  }
+  .titleContainerText {
+    font-size: 16px;
+    padding-right: 0;
+  }
+  .bannerContainerList {
+    padding:24px 16px;
+    width: 90%;
+    bottom: -300px;
+  }
+  .bannerContainerList p {
+    font-size: 18px;
+line-height: 130%;
+margin-bottom: 16px;
+  }
+  .bannerContainerList ul li {
+    font-size: 16px;
+line-height: 140%;
+margin-bottom: 8px;
+  }
+  .cardContainer  {
+    padding-top: 0px;
+    margin-top: 325px;
+  }
+  .cardContainer .wrapper h2 {
+    font-size: 25px;
+line-height: 130%;
+margin-bottom: 40px;
+  }
+  .cardBlock {
+    margin-bottom: 40px;
+  }
+  .cardSliderDots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cardSliderDots ul {
+    display: flex;
+    align-items: center;
+  }
+  .cardSliderDots ul li {
+    width: 6px;
+  height: 6px;
+  background: #878787;
+    border-radius: 50%;
+    padding: 0;
+    margin-right: 6px;
+  }
+  .cardSliderDots ul li:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+  .cardSliderDots ul li button {
+    background: transparent;
+    border: none;
+    font-size: 0;
+  }
+  .cardSliderDots ul .slick-active {
+    background: #303D4B;
+  }
+  .cardContainer {
+    position: relative;
+  }
+  .cardSliderPrev {
+    position: absolute;
+    top: 50%;
+    left: -5px;
+  }
+  .cardSliderNext {
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: rotate(-180deg);
+  }
+  .cardContainer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    overflow: hidden;
+  }
+  .requiredDocuments {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  .requiredDocuments .wrapper {
+    flex-direction: column;
+  }
+  .requiredDocumentsLeft {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .requiredDocumentsRight {
+    width: 100%;
+    height: 308px;
+  }
+  .requiredDocumentsLeft h2 {
+    font-size: 25px;
+  line-height: 130%;
+  margin-bottom: 40px;
+  }
+  .ways .wrapper h2 {
+    font-size: 25px;
+line-height: 130%;
+margin-bottom: 40px;
+  }
+  .waysContaier {
+    flex-direction: column;
+  }
+  .waysContaierLeft {
+    width: 100%;
+    margin-right: 0;
+  }
+  .waysContaierRight {
+    width: 100%;
+    margin-top: 16px;
+  }
+  .waysContaierRight p {
+    font-size: 16px;
+  line-height: 140%;
+  margin-bottom: 16px;
+  }
+  .ways {
+    padding-bottom: 60px;
+  }
+  .faq {
+    padding: 60px 0;
+  }
+  .faq .wrapper h2 {
+    font-size: 25px;
+    line-height: 130%;
+    margin-bottom: 40px;
+  }
+  .contact {
+    padding: 60px 0;
+  }
+  .contact .wrapper > h2 {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 130%;
+    color: #0F1217;
+    margin-bottom: 40px;
+  }
+  .contactContainer {
+    flex-direction: column;
+  }
+  .contactLeft {
+    width: 100%;
+    margin-right: 0;
+  }
+  .contactLeft > p {
+    font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 24px;
+  }
+  .contactInfo p {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  .contactRight {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .contactRight > h2 {
+    font-size: 18px;
+    line-height: 120%;
+  }
+  .contactRight p {
+    font-size: 18px;
+line-height: 120%;
+  }
+  footer {
+    padding: 32px 0;
+    height: auto;
+  }
+  footer .wrapper {
+    flex-direction: column;
+  }
+  footer .wrapper .logo {
+    margin-bottom: 24px;
+  }
+  footer .wrapper ul {
+    flex-direction: column;
+  }
+  footer .wrapper ul li {
+    margin-bottom: 32px;
+    margin-right: 0;
+  }
+  footer .wrapper > button {
+    width: 343px;
   }
 }
